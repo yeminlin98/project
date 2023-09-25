@@ -15,10 +15,10 @@
         <div class="col-12">
           <div class="d-flex flex-column min-vh-100 ">
             <div class="px-3 mb-4 mt-3">
-              <h1 class="mb-0">MMS Solution</h1>
+              <h1 class="mb-0 text-info">YE MIN Solution</h1>
               <h3 class="text-black-50">Invoice App</h3>
             </div>
-            <div class="bg-secondary-subtle p-3 mb-4 mt-4 my-4 ">
+            <div class="bg-secondary-subtle p-3 mb-4 mt-4 my-4 d-print-none ">
               <form action="" id="newRecord">
                 <div class="row">
                   <div class="col">
@@ -67,13 +67,6 @@
 
                   </tr>
 
-                  <tr class="record-row">
-                    <td>1</td>
-                    <td class="text-start record-product">Apple</td>
-                    <td class="text-end record-price">1200</td>
-                    <td class="text-end record-quantity">5</td>
-                    <td class="text-end record-cost">6000</td>
-                  </tr>
                   </tbody">
                 <tfoot class="table-primary">
 
@@ -87,10 +80,10 @@
               </table>
             </div>
 
-            <div class="text-end mt-auto mb-3">
+            <div class="text-end mt-auto mb-3 ">
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Manage Inventory</button>
-              <button class="btn btn-primary">Print</button>
+              <button onclick="print()" class="btn btn-primary">Print</button>
             </div>
           </div>
 
@@ -119,21 +112,25 @@
 
         <div class="p-3 bg-secondary-subtle">
 
-          <form action="#" id="newItem"></form>
-          <div class="mb-3">
-            <label for="mb-3" class="form-label">New Item Name</label>
-            <input type="text" id="newItemName" class="form-control">
-          </div>
-          <div class="row  g-3">
-            <div class="col">
-              <input type="number" id="newItemPrice" class="form-control">
+          <form action="#" id="newItem">
 
+            <div class="mb-3">
+              <label for="mb-3" class="form-label">New Item Name</label>
+              <input type="text" id="newItemName" class="form-control">
+            </div>
+            <div class="row  g-3">
+              <div class="col">
+                <input type="number" id="newItemPrice" class="form-control">
+
+              </div>
+
+              <div class="col">
+                <button class="btn btn-primary w-100">Add Item</button>
+              </div>
             </div>
 
-            <div class="col">
-              <button class="btn btn-primary w-100">Add Item</button>
-            </div>
-          </div>
+
+          </form>
 
         </div>
 
